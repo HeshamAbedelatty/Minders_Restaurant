@@ -2,7 +2,6 @@
 
 ---
 
-#### Slide: Restaurant API Overview
 **Restaurant API Overview**
 - We will create a simple API to manage restaurants using Django Rest Framework.
 - Features:
