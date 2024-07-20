@@ -9,6 +9,7 @@
   - Retrieve a single restaurant
   - Create a new restaurant
   - Update an existing restaurant
+  - Patch an existing restaurant
   - Delete a restaurant
 
 ---
@@ -256,3 +257,26 @@
    ```bash
    python manage.py runserver
    ```
+
+# Restaurant API
+
+## API Request Examples
+
+#### Create a New Restaurant (POST)
+![Create Restaurant](post.jpg)
+
+#### List All Restaurants (GET)
+![List Restaurants](get.jpg)
+
+#### Retrieve a Single Restaurant (GET)
+![Retrieve Restaurant](Retrieve.jpg)
+
+#### Update a Restaurant (PUT)
+![Update Restaurant](put.jpg)
+
+#### Update a Restaurant (Patch)
+![Update Restaurant](patch.jpg)
+
+#### Delete a Restaurant (DELETE)
+![Delete Restaurant](delete.jpg)
+
