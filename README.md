@@ -252,4 +252,7 @@
 
 ---
 
-These slides provide an example project using Django Rest Framework with function-based views, class-based APIViews, and class-based generic views to manage a simple restaurant API. Additionally, it includes steps for setting up a virtual environment and making the 'id' field read-only in the serializer.
+**run a project**
+   ```bash
+   python manage.py runserver
+   ```
