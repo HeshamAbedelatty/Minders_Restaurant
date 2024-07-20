@@ -17,7 +17,7 @@ def restaurant_list(request):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-@api_view(['GET', 'PUT', 'DELETE'])
+@api_view(['GET', 'PUT', 'DELETE', 'PATCH'])
 def restaurant_detail(request, pk):
     try:
         restaurant = Restaurant.objects.get(pk=pk)
@@ -36,6 +36,12 @@ def restaurant_detail(request, pk):
     elif request.method == 'DELETE':
         restaurant.delete()
         return Response(status=status.HTTP_204_NO_CONTENT)
+    elif request.method == 'PATCH':
+        serializer = RestaurantSerializer(restaurant, data=request.data, partial=True)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 

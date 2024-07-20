@@ -6,4 +6,4 @@ class RestaurantSerializer(serializers.ModelSerializer):
     class Meta:
         model = Restaurant
         fields = '__all__'
-        read_only_fields = ('id',)  # Make 'id' read-only
+        # read_only_fields = ('id',)  # Make 'id' read-only
